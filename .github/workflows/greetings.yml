@@ -7,6 +7,6 @@ jobs:
   greeting:
     runs-on: ubuntu-latest
     steps:
-    - uses: ./
+    - uses: helaili/my-docker-action@master
       with:
         who-to-greet: ', is it me you are looking for?'
