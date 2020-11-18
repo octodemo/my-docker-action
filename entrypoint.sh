@@ -1,7 +1,19 @@
 #!/bin/sh -l
 
 echo "Hello $1"
-echo "Hello $1" > msg.txt
-cat msg.txt 
+
+SCAN_DIR=./.action_results
+if [[ -d $SCAN_DIR ]]; then
+  echo "Directory already exists"
+else
+  echo "Creating .action_results directory"
+fi
+
+OUTPUT_FILE=$SCAN_DIR/msg.txt
+echo "Hello $1" > $OUTPUT_FILE
+echo "Content of output file..."
+cat $OUTPUT_FILE
+
+
 time=$(date)
 echo "::set-output name=time::$time"
