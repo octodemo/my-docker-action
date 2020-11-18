@@ -1,8 +1,7 @@
 name: Greetings
 
 on: 
-  push:
-    - master
+  push
 
 jobs:
   greeting:
