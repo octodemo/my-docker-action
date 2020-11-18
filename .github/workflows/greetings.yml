@@ -1,0 +1,11 @@
+name: Greetings
+
+on: [pull_request, issues]
+
+jobs:
+  greeting:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: ./
+      with:
+        who-to-greet: ', is it me you are looking for?'
