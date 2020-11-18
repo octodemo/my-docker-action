@@ -1,12 +1,13 @@
-#!/bin/sh -l
+#!/bin/bash
 
 echo "Hello $1"
 
-SCAN_DIR=./.action_results
-if [[ -d $SCAN_DIR ]]; then
+SCAN_DIR="./.action_results"
+if [[ -d "$SCAN_DIR" ]]; then
   echo "Directory already exists"
 else
   echo "Creating .action_results directory"
+  mkdir $SCAN_DIR
 fi
 
 OUTPUT_FILE=$SCAN_DIR/msg.txt
