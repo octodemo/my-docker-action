@@ -10,3 +10,9 @@ jobs:
     - uses: helaili/my-docker-action@main
       with:
         who-to-greet: ', is it me you are looking for?'
+  greeting-self-hosted:
+    runs-on: self-hosted
+    steps:
+    - uses: helaili/my-docker-action@main
+      with:
+        who-to-greet: ', is it me you are looking for?'
